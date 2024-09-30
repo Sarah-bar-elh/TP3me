@@ -1,82 +1,109 @@
+/* Configuration globale de la page */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e9ecef;
+    background: linear-gradient(135deg, #e0f7fa, #e1bee7); /* Dégradé pastel pour le fond */
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
 }
 
+/* Style du titre */
 h1 {
-    color: #2c3e50;
-    margin-top: 50px;
-    font-size: 28px;
-    letter-spacing: 1px;
+    color: #34495e;
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Style du formulaire avec effet "frosted glass" */
 form {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.85); /* Transparence pour effet de verre */
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    backdrop-filter: blur(10px); /* Effet flouté derrière le formulaire */
+    transition: all 0.4s ease;
 }
 
+/* Élévation et transformation au survol */
 form:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px); /* Effet d'élévation */
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
 }
 
+/* Style des étiquettes */
 label {
     display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #555;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
     text-align: left;
 }
 
+/* Style des champs de saisie et du textarea */
 input[type="text"], input[type="email"], input[type="number"], textarea {
     width: 100%;
     padding: 14px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     font-size: 16px;
-    box-sizing: border-box;
     transition: all 0.3s ease;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
+/* Effet de focus sur les champs */
 input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus {
-    border-color: #2980b9;
+    border-color: #6200ea; /* Violet vif pour un focus moderne */
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.5);
     outline: none;
-    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
 }
 
+/* Style du bouton d'envoi avec dégradé */
 input[type="submit"] {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #5a67d8); /* Dégradé moderne */
     color: #fff;
     border: none;
     padding: 14px;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     width: 100%;
-    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
+/* Effet au survol du bouton d'envoi */
 input[type="submit"]:hover {
-    background-color: red;
+    background: linear-gradient(135deg, red, orange); /* Dégradé rouge au survol */
     color: yellow;
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    transform: scale(1.08); /* Légère augmentation au survol */
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4); /* Ombre plus prononcée */
 }
 
+/* Style de la zone de texte */
 textarea {
-    resize: vertical; /* Allows vertical resizing of the textarea */
+    resize: vertical; /* Permet seulement la redimension verticale */
+    min-height: 120px; /* Hauteur minimale plus grande */
+    border-radius: 10px;
 }
 
+/* Design responsive pour les petits écrans */
 @media (max-width: 500px) {
     form {
-        padding: 20px;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 28px; /* Réduction de la taille du titre sur mobile */
     }
 }
